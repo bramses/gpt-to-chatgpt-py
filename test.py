@@ -9,10 +9,10 @@ def test_toChatML():
 
 def test_toChatML_with_options():
     print('Testing toChatML() with options')
-    assert toChatML('hello', {'system_messages': [{'role': Role.SYSTEM, 'content': 'hi'}], 'role': Role.ASSISTANT}) == [
+    assert toChatML('hello', {'system_messages': ['hi'], 'role': Role.ASSISTANT}) == [
         {'role': Role.SYSTEM, 'content': 'hi'}, {'role': Role.ASSISTANT, 'content': 'hello'}]
     
-    assert toChatML('hello', {'system_messages': [{'role': Role.SYSTEM, 'content': 'hi'}]}) == [
+    assert toChatML('hello', {'system_messages': ['hi']}) == [
         {'role': Role.SYSTEM, 'content': 'hi'}, {'role': Role.USER, 'content': 'hello'}]
     print('toChatML() with options passed')
 

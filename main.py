@@ -9,7 +9,8 @@ def toChatML(original, options = {'system_messages': None, 'role': Role.USER }):
     messages = []
 
     if 'system_messages' in options and options['system_messages'] is not None:
-        messages.extend(options['system_messages'])
+        # lambda for message in system_messages to create a dict with role SYSTEM
+        messages.extend([{'role' : Role.SYSTEM, 'content': message} for message in options['system_messages']])
 
     if 'role' not in options:
         options['role'] = Role.USER
