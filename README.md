@@ -71,3 +71,13 @@ get_message(test_response, {'usage': True, 'isMessages': True})
 # Output: {'usage': {'prompt_tokens': 56, 'completion_tokens': 31, 'total_tokens': 87},
 #          'messages': ['The 2020 World Series was played in Arlington, Texas at the Globe Life Field, which was the new home stadium for the Texas Rangers.']}
 ```
+
+## About the Developer
+
+This repository was written by Bram Adams, a writer and programmer based out of NYC. 
+
+Bram publishes a Zettelkasten, with a twice/weekly newsletter (which you can subscribe to [here](https://www.bramadams.dev/#/portal/)), is a community developer ambassador for OpenAI and does freeleance contracts (for hire!) related to AI/web dev/AR+VR. 
+
+Bram is also the creator of [Stenography](https://stenography.dev), a API and [VSC Extension](https://marketplace.visualstudio.com/items?itemName=Stenography.stenography) that automatically documents code on save.
+
+You can learn more about him and his work on his [website](https://www.bramadams.dev/about/).
