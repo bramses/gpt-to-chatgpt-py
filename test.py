@@ -1,19 +1,19 @@
-from main import toChatML, get_message, Role
+from main import toChatML, get_message, Role, role_to_string
 
 
 def test_toChatML():
     print('Testing toChatML()')
-    assert toChatML('hello') == [{'role': Role.USER, 'content': 'hello'}]
+    assert toChatML('hello') == [{'role': role_to_string(Role.USER), 'content': 'hello'}]
     print('toChatML() passed')
 
 
 def test_toChatML_with_options():
     print('Testing toChatML() with options')
     assert toChatML('hello', {'system_messages': ['hi'], 'role': Role.ASSISTANT}) == [
-        {'role': Role.SYSTEM, 'content': 'hi'}, {'role': Role.ASSISTANT, 'content': 'hello'}]
+        {'role': role_to_string(Role.SYSTEM), 'content': 'hi'}, {'role': role_to_string(Role.ASSISTANT), 'content': 'hello'}]
     
     assert toChatML('hello', {'system_messages': ['hi']}) == [
-        {'role': Role.SYSTEM, 'content': 'hi'}, {'role': Role.USER, 'content': 'hello'}]
+        {'role': role_to_string(Role.SYSTEM), 'content': 'hi'}, {'role': role_to_string(Role.USER), 'content': 'hello'}]
     print('toChatML() with options passed')
 
 

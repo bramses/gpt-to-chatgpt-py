@@ -5,17 +5,27 @@ class Role(Enum):
     USER = 1
     ASSISTANT = 2
 
+def role_to_string(role):
+    if role == Role.SYSTEM:
+        return 'system'
+    elif role == Role.USER:
+        return 'user'
+    elif role == Role.ASSISTANT:
+        return 'assistant'
+    else:
+        return 'unknown'
+
 def toChatML(original, options = {'system_messages': None, 'role': Role.USER }):
     messages = []
 
     if 'system_messages' in options and options['system_messages'] is not None:
         # lambda for message in system_messages to create a dict with role SYSTEM
-        messages.extend([{'role' : Role.SYSTEM, 'content': message} for message in options['system_messages']])
+        messages.extend([{'role' : role_to_string(Role.SYSTEM), 'content': message} for message in options['system_messages']])
 
     if 'role' not in options:
         options['role'] = Role.USER
 
-    messages.append({'role' :  options['role'], 'content': original})
+    messages.append({'role' : role_to_string(options['role']), 'content': original})
     
     return messages
 
