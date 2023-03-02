@@ -3,6 +3,12 @@ Convert a regular GPT call into a ChatGPT call
 
 TYPESCRIPT VERSION HERE -> https://github.com/bramses/gpt-to-chatgpt-ts
 
+## Installation
+
+```py
+pip install gpt-to-chatgpt==0.1.4
+```
+
 ## Functions
 
 ### toChatML()
