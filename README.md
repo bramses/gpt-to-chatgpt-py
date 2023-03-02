@@ -1,6 +1,8 @@
 # gpt-to-chatgpt-py
 Convert a regular GPT call into a ChatGPT call
 
+TYPESCRIPT VERSION HERE -> https://github.com/bramses/gpt-to-chatgpt-ts
+
 ## Functions
 
 ### toChatML()
