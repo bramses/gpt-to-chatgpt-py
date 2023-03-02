@@ -1,4 +1,4 @@
-from src import toChatML, get_message, Role, role_to_string
+from src.gpt_to_chatgpt import toChatML, get_message, Role, role_to_string
 
 
 def test_toChatML():

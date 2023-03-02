@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "gpt-to-chatgpt"
+version = "0.1.4"
+authors = [
+  { name="Bram Adams", email="bram+support@bramadams.dev" },
+]
+description = "A small example package"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/bramses/gpt-to-chatgpt-py"
+"Bug Tracker" = "https://github.com/bramses/gpt-to-chatgpt-py/issues"

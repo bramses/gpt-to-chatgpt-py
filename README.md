@@ -43,6 +43,29 @@ Extracts the message content from a response object.
 get_message(response: dict, options: Optional[dict] = None) -> Union[str, dict]
 ```
 
+### Full Usage
+
+```py
+import openai
+import os
+from dotenv import load_dotenv
+from gpt_to_chatgpt import toChatML, get_message
+
+load_dotenv()
+
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+res = openai.ChatCompletion.create(
+  model="gpt-3.5-turbo",
+  messages=toChatML("this is a test"),
+)
+
+print(get_message(res))
+
+# As an AI language model, I don't really take tests, but I'm always ready to respond to your prompts and queries. How can I assist you today?
+```
+
+
 #### Arguments
 
 - response: The response object from which to extract the message content.
